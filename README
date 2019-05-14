@@ -1,0 +1,24 @@
+First, on flip2.engr.oregonstate.edu type "python chatserve.py <PORT#>" and hit enter. Here PORT# is the number of the port you want to listen for the client request. (It was stated on slack this is an approved way to start the chat server even though it is different from the rubric.) 
+
+If the port is available then "Server listening for requests" message will appear letting you know the chat server is waiting for a request from the client. If the port is unavailable "Bind FAILED" message will appear. 
+
+Second, on flip1.engr.oregonstate.edu type "make chatclient" and hit enter.
+
+Third, type "./chatclient <SERVER-HOSTNAME> <PORT#>" and hit enter to run the chat client. Here SERVER-HOSTNAME should be "flip2.engr.oregonstate.edu" and PORT# should be the same as the PORT# from the first step.
+
+If the PORT# is not the same as from the first step "Error: No connection made" message will appear. If the server is not the same as where you open chat serve then "Error: getting server info" message will appear. If connection is successfully the "Client connected to: <IP address of host>" will appear. "Connected to" will appear on the server side as well
+
+Fourth, on the client side you will be prompted to enter a handle of 10 characters or less. Type a handle and enter it. If the handle is greater than 10 characters it will be shortened to the first 10 characters. After the handle is entered "<YOUR-HANDLE>>" will appear and you are ready to begin chatting with the server.
+
+Fifth, type your message and hit enter. You should see your message on the server side as "<YOUR_HANLE>> <YOUR_MESSAGE>".
+
+Sixth, on the server side you will see "Server>" which is the prompt to enter a message from the server. Type your message and hit enter.
+
+Seventh, on the client side you will see "Server> '<MESSAGE_FROM_SERVER>'". Repeat steps five and six to continue chatting. Note: You must alternate between client and server for the chat to work properly. 
+
+Lastly, reply with "\quit" on either the server or client side to end the connection. 
+
+Note:
+When the client replies "\quit", on the server side "Client has left chat" message will appear. When the server replies "\quit", on the client side "Server has left chat" will appear and the program will exit on the client side.
+The server will remain open waiting for another client(after server or client has quit/left the chat), to close the server (and stop listening for client requests) enter Crtl+C. 
+
